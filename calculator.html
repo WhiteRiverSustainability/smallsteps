@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GHG Emission Calculator</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="calculator.html">Calculator</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Greenhouse Gas Emission Calculator</h1>
+        <p>Estimate your household's greenhouse gas emissions and track your progress towards a greener lifestyle.</p>
+
+        <div class="section">
+            <h2>Select Your Region</h2>
+            <div class="input-group">
+                <label for="region">Region:</label>
+                <select id="region" onchange="updateEmissionFactors()">
+                    <option value="us">United States</option>
+                    <option value="eu">European Union</option>
+                    <option value="ca">Canada</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Scope 1: Household Activities</h2>
+            <div class="input-group">
+                <label for="heating">Heating Systems (kWh or gallons):</label>
+                <input type="number" id="heating" step="any">
+            </div>
+            <div class="input-group">
+                <label for="cooking">Cooking (kWh or gallons):</label>
+                <input type="number" id="cooking" step="any">
+            </div>
+            <div class="input-group">
+                <label for="transportation">Transportation (gallons):</label>
+                <input type="number" id="transportation" step="any">
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Scope 2: Purchased Electricity</h2>
+            <div class="input-group">
+                <label for="electricity">Electricity (kWh):</label>
+                <input type="number" id="electricity" step="any">
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Scope 3: Purchased Goods</h2>
+            <div class="input-group">
+                <label for="goods">Estimated Emissions (lbs CO2):</label>
+                <input type="number" id="goods" step="any">
+            </div>
+        </div>
+
+        <button onclick="calculateEmissions()">Calculate Emissions</button>
+
+        <div class="results section">
+            <h2>Results</h2>
+            <p>Total Emissions (lbs CO2): <span id="total-emissions">0</span></p>
+        </div>
+
+        <script src="js/main.js"></script>
+    </main>
+</body>
+</html>
