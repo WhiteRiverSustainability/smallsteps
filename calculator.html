@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GHG Emission Calculator</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="calculator.html">Calculator</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href='/'>Home</a></li>
+                <li><a href='/about'>About</a></li>
+                <li><a href='/calculator'>Calculator</a></li>
+                <li><a href='/contact'>Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -63,6 +63,46 @@
                 <label for="goods">Estimated Emissions (lbs CO2):</label>
                 <input type="number" id="goods" step="any">
             </div>
+            <div class="input-group">
+                <label for="scope3_1">Scope 3 Category 1:</label>
+                <select id="scope3_1">
+                    <option value="option1">Option 1</option>
+                    <option value="option2">Option 2</option>
+                    <option value="option3">Option 3</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="scope3_2">Scope 3 Category 2:</label>
+                <select id="scope3_2">
+                    <option value="option1">Option 1</option>
+                    <option value="option2">Option 2</option>
+                    <option value="option3">Option 3</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="scope3_3">Scope 3 Category 3:</label>
+                <select id="scope3_3">
+                    <option value="option1">Option 1</option>
+                    <option value="option2">Option 2</option>
+                    <option value="option3">Option 3</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="scope3_4">Scope 3 Category 4:</label>
+                <select id="scope3_4">
+                    <option value="option1">Option 1</option>
+                    <option value="option2">Option 2</option>
+                    <option value="option3">Option 3</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="scope3_5">Scope 3 Category 5:</label>
+                <select id="scope3_5">
+                    <option value="option1">Option 1</option>
+                    <option value="option2">Option 2</option>
+                    <option value="option3">Option 3</option>
+                </select>
+            </div>
         </div>
 
         <button onclick="calculateEmissions()">Calculate Emissions</button>
@@ -72,7 +112,7 @@
             <p>Total Emissions (lbs CO2): <span id="total-emissions">0</span></p>
         </div>
 
-        <script src="js/calculator.js"></script>
+        <script src="js/main.js"></script>
     </main>
 </body>
 </html>
