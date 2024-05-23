@@ -47,9 +47,12 @@ function calculateEmissions() {
     let transportation = parseFloat(document.getElementById('transportation').value) || 0;
     let electricity = parseFloat(document.getElementById('electricity').value) || 0;
 
-    let foodDiet = parseFloat(document.getElementById('scope3_food_diet').value) || 0;
-    let foodPurchase = parseFloat(document.getElementById('scope3_food_purchase').value) || 0;
+    let foodDiet = parseFloat(document.getElementById('scope3_food_diet').value) * 2000 || 0;
+    let foodPurchase = parseFloat(document.getElementById('scope3_food_purchase').value) * 2000 || 0;
     let clothingPurchase = parseFloat(document.getElementById('scope3_clothing_purchase').value) || 0;
+    let numberOfGarments = parseFloat(document.getElementById('number_of_garments').value) || 0;
+
+    let clothingEmissions = clothingPurchase * numberOfGarments;
 
     // Calculate emissions using current factors and scope 3 dropdown values
     let totalEmissions = (heating * currentFactors.heating) +
@@ -58,7 +61,7 @@ function calculateEmissions() {
                          (electricity * currentFactors.electricity) +
                          foodDiet +
                          foodPurchase +
-                         clothingPurchase;
+                         clothingEmissions;
 
     document.getElementById('total-emissions').innerText = totalEmissions.toFixed(2);
 
@@ -71,7 +74,7 @@ function calculateEmissions() {
         electricity: electricity,
         foodDiet: foodDiet,
         foodPurchase: foodPurchase,
-        clothingPurchase: clothingPurchase,
+        clothingEmissions: clothingEmissions,
         totalEmissions: totalEmissions.toFixed(2)
     };
 
