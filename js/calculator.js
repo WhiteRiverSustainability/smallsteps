@@ -47,11 +47,43 @@ function calculateEmissions() {
     let transportation = parseFloat(document.getElementById('transportation').value) || 0;
     let electricity = parseFloat(document.getElementById('electricity').value) || 0;
 
-    // Calculate emissions using current factors
+    let foodDiet = parseFloat(document.getElementById('scope3_food_diet').value) || 0;
+    let foodPurchase = parseFloat(document.getElementById('scope3_food_purchase').value) || 0;
+    let clothingPurchase = parseFloat(document.getElementById('scope3_clothing_purchase').value) || 0;
+
+    // Calculate emissions using current factors and scope 3 dropdown values
     let totalEmissions = (heating * currentFactors.heating) +
                          (cooking * currentFactors.cooking) +
                          (transportation * currentFactors.transportation) +
-                         (electricity * currentFactors.electricity);
+                         (electricity * currentFactors.electricity) +
+                         foodDiet +
+                         foodPurchase +
+                         clothingPurchase;
 
     document.getElementById('total-emissions').innerText = totalEmissions.toFixed(2);
+
+    // Create a data object to send
+    let data = {
+        region: document.getElementById('region').value,
+        heating: heating,
+        cooking: cooking,
+        transportation: transportation,
+        electricity: electricity,
+        foodDiet: foodDiet,
+        foodPurchase: foodPurchase,
+        clothingPurchase: clothingPurchase,
+        totalEmissions: totalEmissions.toFixed(2)
+    };
+
+    // Send data to the server
+    fetch('http://localhost:3000/log', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    .then(response => response.json())
+    .then(data => console.log('Success:', data))
+    .catch(error => console.error('Error:', error));
 }
