@@ -68,28 +68,36 @@ function calculateEmissions() {
 
     document.getElementById('total-emissions').innerText = totalEmissions.toFixed(2);
 
-    // Create a data object to send
-    let data = {
-        region: document.getElementById('region').value,
-        heating: heating,
-        cooking: cooking,
-        transportation: transportation,
-        electricity: electricity,
-        foodDiet: foodDiet,
-        foodPurchase: foodPurchase,
-        clothingEmissions: clothingEmissions,
-        totalEmissions: totalEmissions.toFixed(2)
-    };
+    // Determine the target emissions based on the selected period
+    let targetEmissions;
+    switch (period) {
+        case 1:
+            targetEmissions = 6000; // Year
+            break;
+        case 12:
+            targetEmissions = 6000 / 12; // Month
+            break;
+        case 52:
+            targetEmissions = 6000 / 52; // Week
+            break;
+        case 365:
+            targetEmissions = 6000 / 365; // Day
+            break;
+        default:
+            targetEmissions = 6000; // Default to year if something goes wrong
+    }
 
-    // Send data to the server
-    fetch('http://localhost:3000/log', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-    })
-    .then(response => response.json())
-    .then(data => console.log('Success:', data))
-    .catch(error => console.error('Error:', error));
+    // Show different phrases and images based on the total emissions
+    let messageElement = document.getElementById('emission-message');
+    let imageElement = document.getElementById('emission-image');
+    if (totalEmissions <= targetEmissions) {
+        messageElement.innerText = "Great job! You're within the recommended emissions limit.";
+        imageElement.src = "images/success.png"; // Replace with actual image path
+    } else if (totalEmissions <= targetEmissions * 1.5) {
+        messageElement.innerText = "You're doing okay, but there's room for improvement.";
+        imageElement.src = "images/ok.png"; // Replace with actual image path
+    } else {
+        messageElement.innerText = "Your emissions are too high. Consider making lifestyle changes.";
+        imageElement.src = "images/fail.png"; // Replace with actual image path
+    }
 }
