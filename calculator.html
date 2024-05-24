@@ -18,87 +18,89 @@
         </nav>
     </header>
     <main>
-        <h1>Greenhouse Gas Emission Calculator</h1>
-        <p>Estimate your household's greenhouse gas emissions and track your progress towards a greener lifestyle.</p>
+        <div class="form-container">
+            <h1>Greenhouse Gas Emission Calculator</h1>
+            <p>Estimate your household's greenhouse gas emissions and track your progress towards a greener lifestyle.</p>
 
-        <div class="section">
-            <h2>Select Your Region</h2>
-            <div class="input-group">
-                <label for="region">Region:</label>
-                <select id="region" onchange="updateEmissionFactors()">
-                    <option value="us">United States</option>
-                    <option value="eu">European Union</option>
-                    <option value="ca">Canada</option>
-                </select>
+            <div class="section">
+                <h2>Select Your Region</h2>
+                <div class="input-group">
+                    <label for="region">Region:</label>
+                    <select id="region" onchange="updateEmissionFactors()">
+                        <option value="us">United States</option>
+                        <option value="eu">European Union</option>
+                        <option value="ca">Canada</option>
+                    </select>
+                </div>
             </div>
-        </div>
 
-        <div class="section">
-            <h2>Scope 1: Household Activities</h2>
-            <div class="input-group">
-                <label for="heating">Heating Systems (kWh or gallons):</label>
-                <input type="number" id="heating" step="any">
+            <div class="section">
+                <h2>Scope 1: Household Activities</h2>
+                <div class="input-group">
+                    <label for="heating">Heating Systems (kWh or gallons):</label>
+                    <input type="number" id="heating" step="any">
+                </div>
+                <div class="input-group">
+                    <label for="cooking">Cooking (kWh or gallons):</label>
+                    <input type="number" id="cooking" step="any">
+                </div>
+                <div class="input-group">
+                    <label for="transportation">Transportation (gallons):</label>
+                    <input type="number" id="transportation" step="any">
+                </div>
             </div>
-            <div class="input-group">
-                <label for="cooking">Cooking (kWh or gallons):</label>
-                <input type="number" id="cooking" step="any">
-            </div>
-            <div class="input-group">
-                <label for="transportation">Transportation (gallons):</label>
-                <input type="number" id="transportation" step="any">
-            </div>
-        </div>
 
-        <div class="section">
-            <h2>Scope 2: Purchased Electricity</h2>
-            <div class="input-group">
-                <label for="electricity">Electricity (kWh):</label>
-                <input type="number" id="electricity" step="any">
+            <div class="section">
+                <h2>Scope 2: Purchased Electricity</h2>
+                <div class="input-group">
+                    <label for="electricity">Electricity (kWh):</label>
+                    <input type="number" id="electricity" step="any">
+                </div>
             </div>
-        </div>
 
-        <div class="section">
-            <h2>Scope 3: Purchased Goods</h2>
-            <div class="input-group">
-                <label for="scope3_food_diet">Food Diet Choices:</label>
-                <select id="scope3_food_diet">
-                    <option value="3.64">No restrictions</option>
-                    <option value="2.65">No red meat</option>
-                    <option value="2.20">Pescatarian</option>
-                    <option value="1.87">Vegetarian</option>
-                    <option value="1.65">Vegan</option>
-                </select>
+            <div class="section">
+                <h2>Scope 3: Purchased Goods</h2>
+                <div class="input-group">
+                    <label for="scope3_food_diet">Food Diet Choices:</label>
+                    <select id="scope3_food_diet">
+                        <option value="3.64">No restrictions</option>
+                        <option value="2.65">No red meat</option>
+                        <option value="2.20">Pescatarian</option>
+                        <option value="1.87">Vegetarian</option>
+                        <option value="1.65">Vegan</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="scope3_food_purchase">Food Purchase Choices:</label>
+                    <select id="scope3_food_purchase">
+                        <option value="2">Farmers Market</option>
+                        <option value="2.5">Organic Supermarket</option>
+                        <option value="3">Inorganic Supermarket</option>
+                        <option value="4">Processed Foods</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="scope3_clothing_purchase">Clothing Purchase Choices:</label>
+                    <select id="scope3_clothing_purchase">
+                        <option value="13.23">All New</option>
+                        <option value="9.31">70% New</option>
+                        <option value="7.81">50% New</option>
+                        <option value="5.24">30% New</option>
+                        <option value="2.38">All Thrift</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="number_of_garments">Number of Garments:</label>
+                    <input type="number" id="number_of_garments" step="any">
+                </div>
             </div>
-            <div class="input-group">
-                <label for="scope3_food_purchase">Food Purchase Choices:</label>
-                <select id="scope3_food_purchase">
-                    <option value="2">Farmers Market</option>
-                    <option value="2.5">Organic Supermarket</option>
-                    <option value="3">Inorganic Supermarket</option>
-                    <option value="4">Processed Foods</option>
-                </select>
-            </div>
-            <div class="input-group">
-                <label for="scope3_clothing_purchase">Clothing Purchase Choices:</label>
-                <select id="scope3_clothing_purchase">
-                    <option value="13.23">All New</option>
-                    <option value="9.31">70% New</option>
-                    <option value="7.81">50% New</option>
-                    <option value="5.24">30% New</option>
-                    <option value="2.38">All Thrift</option>
-                </select>
-            </div>
-            <div class="input-group">
-                <label for="number_of_garments">Number of Garments:</label>
-                <input type="number" id="number_of_garments" step="any">
-            </div>
-        </div>
 
-        <button onclick="calculateEmissions()">Calculate Emissions</button>
+            <button onclick="calculateEmissions()">Calculate Emissions</button>
 
-        <div class="results section">
-            <h2>Results</h2>
-            <p>Total Emissions (lbs CO2): <span id="total-emissions">0</span></p>
+            <div class="results section">
+                <h2>Results</h2>
+                <p>Total Emissions (lbs CO2): <span id="total-emissions">0</span></p>
+            </div>
         </div>
 
         <script src="js/calculator.js"></script>
