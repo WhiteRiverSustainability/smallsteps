@@ -47,8 +47,10 @@ function calculateEmissions() {
     let transportation = parseFloat(document.getElementById('transportation').value) || 0;
     let electricity = parseFloat(document.getElementById('electricity').value) || 0;
 
-    let foodDiet = parseFloat(document.getElementById('scope3_food_diet').value) * 2000 || 0;
-    let foodPurchase = parseFloat(document.getElementById('scope3_food_purchase').value) * 2000 || 0;
+    let period = parseFloat(document.getElementById('period').value) || 1;
+
+    let foodDiet = (parseFloat(document.getElementById('scope3_food_diet').value) * 2000) / period || 0;
+    let foodPurchase = (parseFloat(document.getElementById('scope3_food_purchase').value) * 2000) / period || 0;
     let clothingPurchase = parseFloat(document.getElementById('scope3_clothing_purchase').value) || 0;
     let numberOfGarments = parseFloat(document.getElementById('number_of_garments').value) || 0;
 
@@ -73,21 +75,4 @@ function calculateEmissions() {
         cooking: cooking,
         transportation: transportation,
         electricity: electricity,
-        foodDiet: foodDiet,
-        foodPurchase: foodPurchase,
-        clothingEmissions: clothingEmissions,
-        totalEmissions: totalEmissions.toFixed(2)
-    };
-
-    // Send data to the server
-    fetch('http://localhost:3000/log', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-    })
-    .then(response => response.json())
-    .then(data => console.log('Success:', data))
-    .catch(error => console.error('Error:', error));
-}
+        foodDiet:
