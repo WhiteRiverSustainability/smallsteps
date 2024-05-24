@@ -75,4 +75,21 @@ function calculateEmissions() {
         cooking: cooking,
         transportation: transportation,
         electricity: electricity,
-        foodDiet:
+        foodDiet: foodDiet,
+        foodPurchase: foodPurchase,
+        clothingEmissions: clothingEmissions,
+        totalEmissions: totalEmissions.toFixed(2)
+    };
+
+    // Send data to the server
+    fetch('http://localhost:3000/log', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    .then(response => response.json())
+    .then(data => console.log('Success:', data))
+    .catch(error => console.error('Error:', error));
+}
