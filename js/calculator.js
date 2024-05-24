@@ -92,12 +92,12 @@ function calculateEmissions() {
     let imageElement = document.getElementById('emission-image');
     if (totalEmissions <= targetEmissions) {
         messageElement.innerText = "Great job! You're within the recommended emissions limit.";
-        imageElement.src = "images/success.png"; // Replace with actual image path
+        imageElement.src = "WhiteRiverSustainability/smallsteps/goodjob.jpg"; // Replace with actual image path
     } else if (totalEmissions <= targetEmissions * 1.5) {
         messageElement.innerText = "You're doing okay, but there's room for improvement.";
-        imageElement.src = "images/ok.png"; // Replace with actual image path
+        imageElement.src = "WhiteRiverSustainability/smallsteps/soso.jpg"; // Replace with actual image path
     } else {
         messageElement.innerText = "Your emissions are too high. Consider making lifestyle changes.";
-        imageElement.src = "images/fail.png"; // Replace with actual image path
+        imageElement.src = "WhiteRiverSustainability/smallsteps/notgood.jpg"; // Replace with actual image path
     }
 }
