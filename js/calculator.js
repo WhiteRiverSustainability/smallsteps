@@ -52,9 +52,10 @@ function calculateEmissions() {
     let clothingPurchase = parseFloat(document.getElementById('scope3_clothing_purchase').value) || 0;
     let numberOfGarments = parseFloat(document.getElementById('number_of_garments').value) || 0;
 
+    // Calculate clothing emissions based on the number of garments
     let clothingEmissions = clothingPurchase * numberOfGarments;
 
-    // Calculate emissions using current factors and scope 3 dropdown values
+    // Calculate total emissions using current factors and scope 3 dropdown values
     let totalEmissions = (heating * currentFactors.heating) +
                          (cooking * currentFactors.cooking) +
                          (transportation * currentFactors.transportation) +
