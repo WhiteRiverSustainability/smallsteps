@@ -10,10 +10,10 @@
     <header>
         <nav>
             <ul>
-                <li><a href='/'>Home</a></li>
-                <li><a href='/about'>About</a></li>
-                <li><a href='/calculator'>Calculator</a></li>
-                <li><a href='/contact'>Contact</a></li>
+                <li><a href='/' title="Go to Home Page">Home</a></li>
+                <li><a href='/about' title="Learn more About Us">About</a></li>
+                <li><a href='/calculator' title="Use the GHG Emission Calculator">Calculator</a></li>
+                <li><a href='/contact' title="Get in Touch with Us">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -41,7 +41,7 @@
             </div>
 
             <div class="section">
-                <h2>Select Your Region</h2>
+                <h2 title="Select the region you live in">Select Your Region</h2>
                 <div class="input-group">
                     <label for="region">Region:</label>
                     <select id="region" onchange="updateEmissionFactors()">
@@ -69,7 +69,7 @@
             </div>
 
             <div class="section">
-                <h2 title="Each region as their own mix of renewables and fossil fuels.">Scope 2: Purchased Electricity</h2>
+                <h2 title="Each region has their own mix of renewables and fossil fuels.">Scope 2: Purchased Electricity</h2>
                 <div class="input-group">
                     <label for="electricity">Electricity (kWh):</label>
                     <input type="number" id="electricity" step="any">
@@ -100,7 +100,7 @@
                     </select>
                 </div>
                 <div class="input-group">
-                    <label for="scope3_clothing_purchase" title="Think about the average places you get your clothes. Obviously 50% of a shirt can't be thrifted. ">Clothing Purchase Choices:</label>
+                    <label for="scope3_clothing_purchase" title="Think about the average places you get your clothes. Obviously 50% of a shirt can't be thrifted.">Clothing Purchase Choices:</label>
                     <select id="scope3_clothing_purchase">
                         <option value="0">No Option Selected</option>
                         <option value="13.23">All New</option>
@@ -121,20 +121,14 @@
             <div class="results section">
                 <h2>Results</h2>
                 <p><b>Total Emissions (lbs CO2): <span id="total-emissions">0</span></b></p>
-                <p> To keep global warming below 1.5 degrees Celsius, 
-                   each person can emit roughly 6,000 pounds of CO2 per year. 
-                   This is the global standardized goal set by the 
-                   International Panel on Climate Change.</p>
-                <p>To reach Carbon Neutral, the amount of emissions would need to be zero. Check out our
-                    <a href="Greenhouse Gas (GHG) Accounting Guide for Families.pdf" target="_blank">cheatsheet</a>
-                    for ways to reduce your emissions. 
-                </p>
+                <p> To keep global warming below 1.5 degrees Celsius, each person can emit roughly 6,000 pounds of CO2 per year. This is the global standardized goal set by the International Panel on Climate Change.</p>
+                <p>To reach Carbon Neutral, the amount of emissions would need to be zero. Check out our <a href="Greenhouse Gas (GHG) Accounting Guide for Families.pdf" target="_blank">cheatsheet</a> for ways to reduce your emissions.</p>
             </div>
             
             <!-- Placeholder for dynamic messages and images -->
             <div class="results section" id="dynamic-results">
-                <p id="message"></p>
-                <img id="image" src="" alt="Emissions Feedback Image">
+                <p id="emission-message"></p>
+                <img id="emission-image" src="" alt="Emissions Feedback Image">
             </div>
         </div>
 
