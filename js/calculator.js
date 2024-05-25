@@ -66,6 +66,7 @@ function calculateEmissions() {
 
     // Remove the hidden class to display the results and the accordion
     document.getElementById('dynamic-results').classList.remove('hidden');
+    imageElement.classList.remove('hidden');
     document.getElementById('accordion-container').classList.remove('hidden');
 }
 
