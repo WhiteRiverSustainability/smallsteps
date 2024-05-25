@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GHG Emission Calculator</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href='/' title="Go to Home Page">Home</a></li>
-                <li><a href='/about' title="Learn more About Us">About</a></li>
-                <li><a href='/calculator' title="Use the GHG Emission Calculator">Calculator</a></li>
-                <li><a href='/contact' title="Get in Touch with Us">Contact</a></li>
+                <li><a href="/" title="Go to Home Page">Home</a></li>
+                <li><a href="/about" title="Learn more About Us">About</a></li>
+                <li><a href="/calculator" title="Use the GHG Emission Calculator">Calculator</a></li>
+                <li><a href="/contact" title="Get in Touch with Us">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -109,34 +109,32 @@
                 <p>To reach Carbon Neutral, the amount of emissions would need to be zero. Check out our <a href="Greenhouse Gas (GHG) Accounting Guide for Families.pdf" target="_blank">cheatsheet</a> for ways to reduce your emissions.</p>
             </div>
             
-<!-- Placeholder for dynamic messages and images -->
-<div class="results section" id="dynamic-results">
-    <p id="emission-message"></p>
-    <img id="emission-image" src="" alt="Emissions Feedback Image">
-</div>
+            <!-- Placeholder for dynamic messages and images -->
+            <div class="results section hidden" id="dynamic-results">
+                <p id="emission-message"></p>
+                <img id="emission-image" src="" alt="Emissions Feedback Image">
+            </div>
 
+            <!-- Accordion Container -->
+            <div class="accordion-container hidden" id="accordion-container">
+                <button class="accordion">Resource 1</button>
+                <div class="panel">
+                    <p><a href="https://example.com/resource1" target="_blank">Link to Resource 1</a></p>
+                </div>
 
-    <!-- Accordion Container -->
-    <div class="accordion-container">
-        <button class="accordion">Resource 1</button>
-        <div class="panel">
-            <p><a href="https://example.com/resource1" target="_blank">Link to Resource 1</a></p>
+                <button class="accordion">Resource 2</button>
+                <div class="panel">
+                    <p><a href="https://example.com/resource2" target="_blank">Link to Resource 2</a></p>
+                </div>
+
+                <button class="accordion">Resource 3</button>
+                <div class="panel">
+                    <p><a href="https://example.com/resource3" target="_blank">Link to Resource 3</a></p>
+                </div>
+            </div>
         </div>
 
-        <button class="accordion">Resource 2</button>
-        <div class="panel">
-            <p><a href="https://example.com/resource2" target="_blank">Link to Resource 2</a></p>
-        </div>
-
-        <button class="accordion">Resource 3</button>
-        <div class="panel">
-            <p><a href="https://example.com/resource3" target="_blank">Link to Resource 3</a></p>
-        </div>
-    </div>
-</div>
-
-
-        <script src="js/calculator.js"></script>
+        <script src="calculator.js"></script>
     </main>
 </body>
 </html>

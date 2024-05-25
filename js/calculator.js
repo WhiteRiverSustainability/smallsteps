@@ -5,20 +5,16 @@ const emissionFactors = {
         transportation: 19.59,  // lbs CO2 per gallon for gasoline
         electricity: 0.823  // lbs CO2 per kWh for electricity
     },
-    
 };
 
 // Current emission factors being used, defaulting to 'default'
 let currentFactors = emissionFactors['default'];
 
-
 function calculateEmissions() {
     let heating = parseFloat(document.getElementById('heating').value) || 0;
     let transportation = parseFloat(document.getElementById('transportation').value) || 0;
     let electricity = parseFloat(document.getElementById('electricity').value) || 0;
-
     let period = parseFloat(document.getElementById('period').value) || 1;
-
     let foodDiet = (parseFloat(document.getElementById('scope3_food_diet').value) * 2000) / period || 0;
     let foodPurchase = (parseFloat(document.getElementById('scope3_food_purchase').value) * 2000) / period || 0;
     let clothingPurchase = parseFloat(document.getElementById('scope3_clothing_purchase').value) || 0;
@@ -56,21 +52,25 @@ function calculateEmissions() {
             targetEmissions = 6000; // Default to year if something goes wrong
     }
 
-// Show different phrases and images based on the total emissions
-let messageElement = document.getElementById('emission-message');
-let imageElement = document.getElementById('emission-image');
+    // Show different phrases and images based on the total emissions
+    let messageElement = document.getElementById('emission-message');
+    let imageElement = document.getElementById('emission-image');
 
-if (totalEmissions <= targetEmissions) {
-    messageElement.innerText = "Great job! You're within the recommended emissions limit.";
-    imageElement.src = "https://github.com/WhiteRiverSustainability/smallsteps/blob/main/goodjob.jpg?raw=true"; // Replace with actual image path
-} else if (totalEmissions <= targetEmissions * 1.5) {
-    messageElement.innerText = "You're doing okay, but there's room for improvement.";
-    imageElement.src = "https://github.com/WhiteRiverSustainability/smallsteps/blob/main/soso.jpg?raw=true"; // Replace with actual image path
-} else {
-    messageElement.innerText = "Your emissions are too high. Consider making lifestyle changes.";
-    imageElement.src = "https://github.com/WhiteRiverSustainability/smallsteps/blob/main/notgood.jpg?raw=true"; // Replace with actual image path
+    if (totalEmissions <= targetEmissions) {
+        messageElement.innerText = "Great job! You're within the recommended emissions limit.";
+        imageElement.src = "https://github.com/WhiteRiverSustainability/smallsteps/blob/main/goodjob.jpg?raw=true"; // Replace with actual image path
+    } else if (totalEmissions <= targetEmissions * 1.5) {
+        messageElement.innerText = "You're doing okay, but there's room for improvement.";
+        imageElement.src = "https://github.com/WhiteRiverSustainability/smallsteps/blob/main/soso.jpg?raw=true"; // Replace with actual image path
+    } else {
+        messageElement.innerText = "Your emissions are too high. Consider making lifestyle changes.";
+        imageElement.src = "https://github.com/WhiteRiverSustainability/smallsteps/blob/main/notgood.jpg?raw=true"; // Replace with actual image path
+    }
+
+    // Remove the hidden class to display the results and the accordion
+    document.getElementById('dynamic-results').classList.remove('hidden');
+    document.getElementById('accordion-container').classList.remove('hidden');
 }
-
 
 document.addEventListener("DOMContentLoaded", function() {
     var acc = document.getElementsByClassName("accordion");
@@ -86,4 +86,3 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 });
-
