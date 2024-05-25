@@ -1,29 +1,11 @@
 // Initial emission factors by region
 const emissionFactors = {
     "default": { // Default could be the most common or average factors
-        heating: 0.408,  // lbs CO2 per kWh for natural gas
-        cooking: 12.65,  // lbs CO2 per gallon for propane
+        heating: 11.7,  // lbs CO2 per therm for natural gas
         transportation: 19.59,  // lbs CO2 per gallon for gasoline
         electricity: 0.823  // lbs CO2 per kWh for electricity
     },
-    "us": {
-        heating: 0.408,
-        cooking: 12.65,
-        transportation: 19.59,
-        electricity: 0.823
-    },
-    "eu": {
-        heating: 0.34,
-        cooking: 11.89,
-        transportation: 18.95,
-        electricity: 0.56
-    },
-    "ca": {
-        heating: 0.42,
-        cooking: 13.01,
-        transportation: 20.21,
-        electricity: 0.85
-    }
+    
 };
 
 // Current emission factors being used, defaulting to 'default'
@@ -92,12 +74,28 @@ function calculateEmissions() {
     let imageElement = document.getElementById('emission-image');
     if (totalEmissions <= targetEmissions) {
         messageElement.innerText = "Great job! You're within the recommended emissions limit.";
-        imageElement.src = "images/success.png"; // Replace with actual image path
+        imageElement.src = "https://github.com/WhiteRiverSustainability/smallsteps/blob/main/goodjob.jpg?raw=true"; // Replace with actual image path
     } else if (totalEmissions <= targetEmissions * 1.5) {
         messageElement.innerText = "You're doing okay, but there's room for improvement.";
-        imageElement.src = "images/ok.png"; // Replace with actual image path
+        imageElement.src = "https://github.com/WhiteRiverSustainability/smallsteps/blob/main/soso.jpg?raw=true"; // Replace with actual image path
     } else {
         messageElement.innerText = "Your emissions are too high. Consider making lifestyle changes.";
-        imageElement.src = "images/fail.png"; // Replace with actual image path
+        imageElement.src = "https://github.com/WhiteRiverSustainability/smallsteps/blob/main/notgood.jpg?raw=true"; // Replace with actual image path
     }
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    var acc = document.getElementsByClassName("accordion");
+    for (var i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        });
+    }
+});
+
