@@ -11,21 +11,9 @@ const emissionFactors = {
 // Current emission factors being used, defaulting to 'default'
 let currentFactors = emissionFactors['default'];
 
-function updateEmissionFactors() {
-    let region = document.getElementById('region').value;
-    console.log("Region selected:", region);
-
-    // Update current emission factors based on the selected region
-    if (emissionFactors[region]) {
-        currentFactors = emissionFactors[region];
-    } else {
-        currentFactors = emissionFactors['default']; // Fallback to default if region is unknown
-    }
-}
 
 function calculateEmissions() {
     let heating = parseFloat(document.getElementById('heating').value) || 0;
-    let cooking = parseFloat(document.getElementById('cooking').value) || 0;
     let transportation = parseFloat(document.getElementById('transportation').value) || 0;
     let electricity = parseFloat(document.getElementById('electricity').value) || 0;
 
@@ -41,7 +29,6 @@ function calculateEmissions() {
 
     // Calculate total emissions using current factors and scope 3 dropdown values
     let totalEmissions = (heating * currentFactors.heating) +
-                         (cooking * currentFactors.cooking) +
                          (transportation * currentFactors.transportation) +
                          (electricity * currentFactors.electricity) +
                          foodDiet +
