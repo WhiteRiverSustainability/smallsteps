@@ -1,16 +1,12 @@
-// Initial emission factors by region
+// Emission factors for different categories
 const emissionFactors = {
-    "default": { // Default could be the most common or average factors
-        heating: 11.7,  // lbs CO2 per therm for natural gas
-        transportation: 19.59,  // lbs CO2 per gallon for gasoline
-        electricity: 0.823  // lbs CO2 per kWh for electricity
-    },
+    heating: 11.7,  // lbs CO2 per therm for natural gas
+    transportation: 19.59,  // lbs CO2 per gallon for gasoline
+    electricity: 0.823  // lbs CO2 per kWh for electricity
 };
 
-// Current emission factors being used, defaulting to 'default'
-let currentFactors = emissionFactors['default'];
-
 function calculateEmissions() {
+    // Get input values or set to 0 if empty
     let heating = parseFloat(document.getElementById('heating').value) || 0;
     let transportation = parseFloat(document.getElementById('transportation').value) || 0;
     let electricity = parseFloat(document.getElementById('electricity').value) || 0;
@@ -23,14 +19,15 @@ function calculateEmissions() {
     // Calculate clothing emissions based on the number of garments
     let clothingEmissions = clothingPurchase * numberOfGarments;
 
-    // Calculate total emissions using current factors and scope 3 dropdown values
-    let totalEmissions = (heating * currentFactors.heating) +
-                         (transportation * currentFactors.transportation) +
-                         (electricity * currentFactors.electricity) +
+    // Calculate total emissions using emission factors
+    let totalEmissions = (heating * emissionFactors.heating) +
+                         (transportation * emissionFactors.transportation) +
+                         (electricity * emissionFactors.electricity) +
                          foodDiet +
                          foodPurchase +
                          clothingEmissions;
 
+    // Update the total emissions in the results section
     document.getElementById('total-emissions').innerText = totalEmissions.toFixed(2);
 
     // Determine the target emissions based on the selected period
