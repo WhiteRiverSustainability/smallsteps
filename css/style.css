@@ -11,10 +11,11 @@ body {
 }
 
 .header {
-    background-color: #4CAF50;
+    background-color: #90a997;
     color: white;
     padding: 20px;
     text-align: center;
+    border: #333;
 }
 
 nav ul {
@@ -93,7 +94,7 @@ button:hover {
 }
 
 .accordion {
-    background-color: #4CAF50;
+    background-color: #000000;
     color: white;
     cursor: pointer;
     padding: 18px;
