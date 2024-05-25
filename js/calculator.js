@@ -56,20 +56,28 @@ function calculateEmissions() {
             targetEmissions = 6000; // Default to year if something goes wrong
     }
 
-    // Show different phrases and images based on the total emissions
-    let messageElement = document.getElementById('emission-message');
-    let imageElement = document.getElementById('emission-image');
-    if (totalEmissions <= targetEmissions) {
-        messageElement.innerText = "Great job! You're within the recommended emissions limit.";
-        imageElement.src = "https://github.com/WhiteRiverSustainability/smallsteps/blob/main/goodjob.jpg?raw=true"; // Replace with actual image path
-    } else if (totalEmissions <= targetEmissions * 1.5) {
-        messageElement.innerText = "You're doing okay, but there's room for improvement.";
-        imageElement.src = "https://github.com/WhiteRiverSustainability/smallsteps/blob/main/soso.jpg?raw=true"; // Replace with actual image path
-    } else {
-        messageElement.innerText = "Your emissions are too high. Consider making lifestyle changes.";
-        imageElement.src = "https://github.com/WhiteRiverSustainability/smallsteps/blob/main/notgood.jpg?raw=true"; // Replace with actual image path
-    }
+   // Show different phrases and images based on the total emissions
+let messageElement = document.getElementById('emission-message');
+let imageElement = document.getElementById('emission-image');
+
+if (totalEmissions <= targetEmissions) {
+    messageElement.innerText = "Great job! You're within the recommended emissions limit.";
+    imageElement.src = "https://github.com/WhiteRiverSustainability/smallsteps/blob/main/goodjob.jpg?raw=true"; // Replace with actual image path
+} else if (totalEmissions <= targetEmissions * 1.5) {
+    messageElement.innerText = "You're doing okay, but there's room for improvement.";
+    imageElement.src = "https://github.com/WhiteRiverSustainability/smallsteps/blob/main/soso.jpg?raw=true"; // Replace with actual image path
+} else {
+    messageElement.innerText = "Your emissions are too high. Consider making lifestyle changes.";
+    imageElement.src = "https://github.com/WhiteRiverSustainability/smallsteps/blob/main/notgood.jpg?raw=true"; // Replace with actual image path
 }
+
+// Ensure the image is styled correctly according to the CSS
+imageElement.style.maxWidth = "100%";
+imageElement.style.height = "auto";
+imageElement.style.display = "block";
+imageElement.style.margin = "0 auto";
+imageElement.style.borderRadius = "8px"; // Optional: to match the border radius of the form
+
 
 document.addEventListener("DOMContentLoaded", function() {
     var acc = document.getElementsByClassName("accordion");
