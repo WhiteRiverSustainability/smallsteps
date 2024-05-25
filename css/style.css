@@ -127,3 +127,31 @@ button:hover {
     transition: max-height 0.2s ease-out;
     border-bottom: 1px solid #ccc;
 }
+
+/* General styling for the form container */
+.form-container {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Styling for the results section */
+.results {
+    margin-top: 20px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure images fit within the form boundaries */
+.results img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px; /* Optional: to match the border radius of the form */
+}
