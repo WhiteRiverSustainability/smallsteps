@@ -41,17 +41,33 @@ nav ul {
     padding: 0;
     z-index: 2; /* Ensure it's above the semi-transparent layer */
     position: relative;
+    display: flex; /* Use flexbox for horizontal alignment */
+    justify-content: center; /* Center the navigation items */
+    gap: 20px; /* Add space between the items */
 }
 
 nav ul li {
     display: inline;
     margin-right: 10px;
+    position: relative;
+    padding: 10px 20px; /* Add padding for spacing */
+}
+
+nav ul li:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -5px;
+    height: 100%;
+    width: 1px;
+    background-color: white; /* Separator color */
+    opacity: 0.5; /* Slightly transparent */
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 60px; /* Average font size */
+    font-size: 1.5em; /* Adjust font size */
     text-shadow: 1px 1px 2px #000; /* Add text shadow for better readability */
 }
 
