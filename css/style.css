@@ -12,15 +12,32 @@ body {
 
 .header {
     background-color: #90a997;
+    background-image: url('https://github.com/WhiteRiverSustainability/smallsteps/blob/main/nav.jpg?raw=true'); /* Add your image path here */
+    background-size: cover;
+    background-position: center;
     color: white;
-    padding: 20px;
+    padding: 40px; /* Increase padding to make the nav bar bigger */
     text-align: center;
     border: #333;
+    position: relative; /* To position the text properly */
+}
+
+.header::after {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent layer for better text readability */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1; /* Ensure it's behind the text */
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    z-index: 2; /* Ensure it's above the semi-transparent layer */
+    position: relative;
 }
 
 nav ul li {
@@ -31,6 +48,8 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
+    font-size: 20px; /* Increase font size for better readability */
+    text-shadow: 1px 1px 2px #000; /* Add text shadow for better readability */
 }
 
 .form-container {
