@@ -159,11 +159,10 @@ button:hover {
     color: white;
     padding: 18px;
     width: 100%;
-    text-align: left;
+    text-align: center;
     font-size: 15px; /* Same as accordion font size */
     margin-bottom: 10px;
     border-radius: 5px;
-    text-align: center; /* Center-align the header text */
 }
 
 .accordion {
