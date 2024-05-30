@@ -154,6 +154,18 @@ button:hover {
     margin-top: 20px;
 }
 
+.accordion-header {
+    background-color: #000000; /* Same as accordion background */
+    color: white;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    font-size: 15px; /* Same as accordion font size */
+    margin-bottom: 10px;
+    border-radius: 5px;
+    text-align: center; /* Center-align the header text */
+}
+
 .accordion {
     background-color: #000000;
     color: white;
