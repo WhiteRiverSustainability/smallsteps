@@ -150,19 +150,11 @@ button:hover {
 }
 
 /* Accordion CSS */
+/* Accordion CSS */
 .accordion-container {
     margin-top: 20px;
-}
-
-.accordion-header {
-    background-color: #000000; /* Same as accordion background */
-    color: white;
-    padding: 18px;
-    width: 100%;
-    text-align: center;
-    font-size: 15px; /* Same as accordion font size */
-    margin-bottom: 10px;
-    border-radius: 5px;
+    max-width: 800px; /* Ensure the container does not exceed the form width */
+    margin: 0 auto; /* Center the container */
 }
 
 .accordion {
@@ -178,6 +170,7 @@ button:hover {
     transition: 0.4s;
     margin-bottom: 10px;
     border-radius: 5px;
+    box-sizing: border-box; /* Ensure padding and width are within the container */
 }
 
 .active, .accordion:hover {
@@ -203,7 +196,9 @@ button:hover {
     overflow: hidden;
     transition: max-height 0.2s ease-out;
     border-bottom: 1px solid #ccc;
+    box-sizing: border-box; /* Ensure padding and width are within the container */
 }
+
 
 /* Ensure images fit within the form boundaries */
 .results img {
