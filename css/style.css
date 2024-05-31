@@ -207,3 +207,50 @@ button:hover {
     margin: 0 auto;
     border-radius: 8px; /* Optional: to match the border radius of the form */
 }
+
+/* Box container CSS */
+.box-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    height: 800px; /* Adjust as needed */
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    position: absolute;
+    width: 300px; /* Adjust size as needed */
+    height: 300px; /* Adjust size as needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust color and opacity */
+    border-radius: 20px;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.box1 {
+    top: 0;
+    left: 0;
+    background-color: #708d5d;
+}
+
+.box2 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    color: black;
+}
+
+.box3 {
+    bottom: 0;
+    right: 0;
+    background-color: #cccccc;
+    color: black;
+}
