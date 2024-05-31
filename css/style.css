@@ -235,22 +235,25 @@ button:hover {
 }
 
 .box1 {
-    top: 0;
-    left: 0;
+    top: 10%;
+    left: 10%;
     background-color: #708d5d;
+    z-index: 1;
 }
 
 .box2 {
-    top: 50%;
-    left: 50%;
+    top: 30%;
+    left: 30%;
     transform: translate(-50%, -50%);
     background-color: #ffffff;
     color: black;
+    z-index: 2;
 }
 
 .box3 {
-    bottom: 0;
-    right: 0;
+    top: 50%;
+    left: 50%;
     background-color: #cccccc;
     color: black;
+    z-index: 3;
 }
