@@ -210,18 +210,17 @@ button:hover {
 
 /* Box container CSS */
 .box-container {
-    position: relative;
     width: 100%;
-    max-width: 1200px;
-    height: 800px; /* Adjust as needed */
-    margin: 50px auto;
+    max-width: 800px; /* Adjust as needed */
+    margin: 50px auto; /* Center the container horizontally */
     display: flex;
+    flex-direction: column; /* Stack the boxes vertically */
     justify-content: center;
     align-items: center;
+    gap: 20px; /* Space between the boxes */
 }
 
 .box {
-    position: absolute;
     width: 500px; /* Adjust size as needed */
     height: 500px; /* Adjust size as needed */
     border-radius: 20px;
@@ -235,25 +234,16 @@ button:hover {
 }
 
 .box1 {
-    top: 20%; /* Adjusted to better align with the graphic */
-    left: 20%; /* Adjusted to better align with the graphic */
     background-color: #708d5d;
-    z-index: 1;
 }
 
 .box2 {
-    top: 40%; /* Adjusted to better align with the graphic */
-    left: 30%; /* Adjusted to better align with the graphic */
-    transform: translate(-50%, -50%);
     background-color: #ffffff;
     color: black;
-    z-index: 2;
 }
 
 .box3 {
-    top: 60%; /* Adjusted to better align with the graphic */
-    left: 50%; /* Adjusted to better align with the graphic */
     background-color: #cccccc;
     color: black;
-    z-index: 3;
 }
+
