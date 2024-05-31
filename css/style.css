@@ -243,7 +243,7 @@ button:hover {
 
 .box2 {
     top: 30%;
-    left: 25%;
+    left: 40%;
     transform: translate(-50%, -50%);
     background-color: #ffffff;
     color: black;
@@ -252,7 +252,7 @@ button:hover {
 
 .box3 {
     top: 50%;
-    left: 40%;
+    left: 70%;
     background-color: #cccccc;
     color: black;
     z-index: 3;
