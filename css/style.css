@@ -79,7 +79,7 @@ nav ul li a:hover {
 }
 
 h1 {
-    font-size: 3em; /* Increase the size of the main header text */
+    font-size: 8em; /* Increase the size of the main header text */
     z-index: 2;
     position: relative;
     margin-bottom: 10px; /* Add some spacing between title and nav */
