@@ -212,32 +212,28 @@ button:hover {
 /* Box container CSS */
 .box-container {
     width: 100%;
-    max-width: 1200px; /* Adjust as needed */
+    max-width: 800px; /* Adjust as needed */
     margin: 50px auto; /* Center the container horizontally */
     display: flex;
-    flex-direction: column; /* Arrange boxes in a row */
-    justify-content: space-between; /* Space boxes evenly */
-    align-items: flex-start; /* Align items to the top */
+    flex-direction: column; /* Stack the boxes vertically */
     gap: 20px; /* Space between the boxes */
-    border-left: 2px solid white; /* Add a border on the left */
-    padding-left: 20px; /* Add some padding to the left */
 }
 
 .box {
-    width: 45%; /* Adjust size as needed */
+    width: 100%; /* Full width within the container */
     border-radius: 20px;
     color: white;
     padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: left; /* Align text to the left */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     font-size: large;
+    text-align: left; /* Align text to the left */
+    background-color: #ffffff; /* Default background color */
+    color: black; /* Default text color */
 }
 
 .box1 {
     background-color: #708d5d;
+    color: white;
 }
 
 .box2 {
@@ -249,11 +245,3 @@ button:hover {
     background-color: #cccccc;
     color: black;
 }
-
-/* Add a dividing line between the boxes */
-.divider {
-    border-left: 2px solid white;
-    height: 100%;
-}
-
-
