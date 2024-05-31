@@ -215,7 +215,7 @@ button:hover {
     max-width: 1200px; /* Adjust as needed */
     margin: 50px auto; /* Center the container horizontally */
     display: flex;
-    flex-direction: row; /* Arrange boxes in a row */
+    flex-direction: column; /* Arrange boxes in a row */
     justify-content: space-between; /* Space boxes evenly */
     align-items: flex-start; /* Align items to the top */
     gap: 20px; /* Space between the boxes */
