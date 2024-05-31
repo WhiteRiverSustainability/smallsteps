@@ -224,7 +224,6 @@ button:hover {
     position: absolute;
     width: 300px; /* Adjust size as needed */
     height: 300px; /* Adjust size as needed */
-    background-color: rgba(0, 0, 0, 0.5); /* Adjust color and opacity */
     border-radius: 20px;
     color: white;
     padding: 20px;
@@ -232,6 +231,7 @@ button:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .box1 {
@@ -243,7 +243,7 @@ button:hover {
 
 .box2 {
     top: 30%;
-    left: 30%;
+    left: 25%;
     transform: translate(-50%, -50%);
     background-color: #ffffff;
     color: black;
@@ -252,7 +252,7 @@ button:hover {
 
 .box3 {
     top: 50%;
-    left: 50%;
+    left: 40%;
     background-color: #cccccc;
     color: black;
     z-index: 3;
