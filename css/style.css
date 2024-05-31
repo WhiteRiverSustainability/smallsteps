@@ -82,7 +82,8 @@ h1 {
     font-size: 8em; /* Increase the size of the main header text */
     z-index: 2;
     position: relative;
-    margin-bottom: 10px; /* Add some spacing between title and nav */
+    margin-bottom: 3px; /* Add some spacing between title and nav */
+    margin-top: 3px;
 }
 
 .form-container {
@@ -231,6 +232,7 @@ button:hover {
     align-items: center;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: large;
 }
 
 .box1 {
