@@ -84,6 +84,7 @@ h1 {
     position: relative;
     margin-bottom: 3px; /* Add some spacing between title and nav */
     margin-top: 3px;
+    align-items: center;
 }
 
 .form-container {
