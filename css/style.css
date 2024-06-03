@@ -282,3 +282,15 @@ button:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     font-size: 20px;
 }
+
+.secret-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    font-size: 5px;
+    padding: 5px;
+    opacity: 0.5;
+}
