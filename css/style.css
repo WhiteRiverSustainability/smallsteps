@@ -256,6 +256,7 @@ button:hover {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin-bottom: 20px;
 }
 
 #generateButton:hover {
@@ -263,8 +264,13 @@ button:hover {
 }
 
 #quoteDisplay {
-    margin-top: 20px;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 5px;
+    width: 60%;
+    max-width: 800px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     font-size: 20px;
-    font-style: italic;
-    color: #555;
 }
