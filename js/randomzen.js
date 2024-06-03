@@ -1,4 +1,4 @@
-<script>
+document.addEventListener('DOMContentLoaded', function() {
     const bulletPoints = [
         "The innocence of the first inquiry - what am I? - is needed throughout Zen practice",
 "The Zen way of calligraphy is to write in the most straightforward, simple way as if you were a beginner, not trying to make something skillful or beautiful, but simply writing with full attention as if you were discovering what you were writing for the first time; then your full nature will be in your writing.",
@@ -113,4 +113,5 @@
         const randomQuote = bulletPoints[randomIndex];
         document.getElementById('quoteDisplay').innerText = randomQuote;
     });
-</script>
+
+});
