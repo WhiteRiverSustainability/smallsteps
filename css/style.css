@@ -246,3 +246,25 @@ button:hover {
     background-color: #cccccc;
     color: black;
 }
+
+#generateButton {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#generateButton:hover {
+    background-color: #45a049;
+}
+
+#quoteDisplay {
+    margin-top: 20px;
+    font-size: 20px;
+    font-style: italic;
+    color: #555;
+}
