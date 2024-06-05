@@ -79,7 +79,7 @@ nav ul li a:hover {
 }
 
 h1 {
-    font-size: 8em; /* Increase the size of the main header text */
+    font-size: 6vw; /* mobile device friendly */
     z-index: 2;
     position: relative;
     margin-bottom: 3px; /* Add some spacing between title and nav */
@@ -211,4 +211,11 @@ button:hover {
     display: block;
     margin: 0 auto;
     border-radius: 8px; /* Optional: to match the border radius of the form */
+}
+
+/* Additional media queries for smaller screens */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 8vw; /* Adjust font size for smaller screens */
+    }
 }
