@@ -1,0 +1,137 @@
+.hidden {
+    display: none;
+}
+
+body {
+    font-family: 'Lora', serif;
+    background-color: #556B2F; /* Dark earthy green */
+    color: #333;
+    margin: 0; /* Remove margin to align the header with the viewport */
+    line-height: 1.6;
+}
+
+.header {
+    background-color: #90a997;
+    background-image: url('https://github.com/WhiteRiverSustainability/smallsteps/blob/main/nav.jpg?raw=true'); /* Add your image path here */
+    background-size: cover;
+    background-position: center center; /* Center the middle of the image */
+    color: white;
+    height: 80vh; /* Make the header take up most of the viewport height */
+    display: flex;
+    flex-direction: column; /* Align the title and nav vertically */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative; /* To position the text properly */
+}
+
+.header::after {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent layer for better text readability */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1; /* Ensure it's behind the text */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    z-index: 2; /* Ensure it's above the semi-transparent layer */
+    position: relative;
+    display: flex; /* Use flexbox for horizontal alignment */
+    justify-content: center; /* Center the navigation items */
+    gap: 20px; /* Add space between the items */
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+    position: relative;
+    padding: 10px 20px; /* Add padding for spacing */
+}
+
+nav ul li:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -5px;
+    height: 100%;
+    width: 1px;
+    background-color: white; /* Separator color */
+    opacity: 0.5; /* Slightly transparent */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em; /* Adjust font size */
+    text-shadow: 1px 1px 2px #000; /* Add text shadow for better readability */
+    padding: 10px 20px; /* Ensure the padding is applied to the anchor */
+    border-radius: 4px; /* Add border radius for smoother corners */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+nav ul li a:hover {
+    outline: 2px solid white; /* Add a white outline on hover */
+}
+
+h1 {
+    font-size: 8em; /* Increase the size of the main header text */
+    z-index: 2;
+    position: relative;
+    margin-bottom: 3px; /* Add some spacing between title and nav */
+    margin-top: 3px;
+    align-items: center;
+    white-space: nowrap;
+    overflow: inherit;
+    text-align: center;
+}
+
+
+/* Box container CSS */
+.box-container {
+    width: 100%;
+    max-width: 800px; /* Adjust as needed */
+    margin: 50px auto; /* Center the container horizontally */
+    display: flex;
+    flex-direction: column; /* Stack the boxes vertically */
+    gap: 20px; /* Space between the boxes */
+}
+
+.box {
+    width: 100%; /* Full width within the container */
+    border-radius: 20px;
+    color: white;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: large;
+    text-align: left; /* Align text to the left */
+    background-color: #ffffff; /* Default background color */
+    color: black; /* Default text color */
+}
+
+.box1 {
+    background-color: #708d5d;
+    color: white;
+}
+
+.box2 {
+    background-color: #ffffff;
+    color: black;
+}
+
+.box3 {
+    background-color: #cccccc;
+    color: black;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
