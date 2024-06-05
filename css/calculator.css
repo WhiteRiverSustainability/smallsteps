@@ -11,10 +11,7 @@ body {
 }
 
 .header {
-    background-color: #90a997;
-    background-image: url('https://github.com/WhiteRiverSustainability/smallsteps/blob/main/nav.jpg?raw=true'); /* Add your image path here */
-    background-size: cover;
-    background-position: center center; /* Center the middle of the image */
+    background: url('https://github.com/WhiteRiverSustainability/smallsteps/blob/main/nav.jpg?raw=true') center/cover #90a997;
     color: white;
     height: 80vh; /* Make the header take up most of the viewport height */
     display: flex;
@@ -47,10 +44,7 @@ nav ul {
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 10px;
     position: relative;
-    padding: 10px 20px; /* Add padding for spacing */
 }
 
 nav ul li:not(:last-child)::after {
@@ -79,25 +73,20 @@ nav ul li a:hover {
 }
 
 h1 {
-    font-size: 6vw; /* mobile device friendly */
+    font-size: 6vw; /* Mobile device friendly */
     z-index: 2;
     position: relative;
-    margin-bottom: 3px; /* Add some spacing between title and nav */
-    margin-top: 3px;
-    align-items: center;
-    white-space: nowrap;
-    overflow: inherit;
+    margin: 3px 0; /* Add some spacing between title and nav */
     text-align: center;
 }
 
-.form-container {
+.form-container, .results, .accordion-container {
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     max-width: 800px;
-    margin: 0 auto;
-    margin-top: 20px; /* Add margin-top to create space between the form and the header */
+    margin: 20px auto;
 }
 
 .section {
@@ -134,35 +123,28 @@ button {
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px; /* Average font size */
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
     background-color: #45a049;
 }
 
-.center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.results img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px; /* Optional: to match the border radius of the form */
 }
 
-.results {
-    margin-top: 20px;
-    padding: 20px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Accordion CSS */
 .accordion-container {
-    margin-top: 20px;
     max-width: 800px; /* Ensure the container does not exceed the form width */
     margin: 0 auto; /* Center the container */
 }
 
 .accordion {
-    background-color: #000000;
+    background-color: #000;
     color: white;
     cursor: pointer;
     padding: 18px;
@@ -201,16 +183,6 @@ button:hover {
     transition: max-height 0.2s ease-out;
     border-bottom: 1px solid #ccc;
     box-sizing: border-box; /* Ensure padding and width are within the container */
-}
-
-
-/* Ensure images fit within the form boundaries */
-.results img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    border-radius: 8px; /* Optional: to match the border radius of the form */
 }
 
 /* Additional media queries for smaller screens */

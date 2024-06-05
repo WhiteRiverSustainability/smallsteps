@@ -11,10 +11,7 @@ body {
 }
 
 .header {
-    background-color: #90a997;
-    background-image: url('https://github.com/WhiteRiverSustainability/smallsteps/blob/main/nav.jpg?raw=true'); /* Add your image path here */
-    background-size: cover;
-    background-position: center center; /* Center the middle of the image */
+    background: url('https://github.com/WhiteRiverSustainability/smallsteps/blob/main/nav.jpg?raw=true') center/cover #90a997;
     color: white;
     height: 80vh; /* Make the header take up most of the viewport height */
     display: flex;
@@ -47,10 +44,7 @@ nav ul {
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 10px;
     position: relative;
-    padding: 10px 20px; /* Add padding for spacing */
 }
 
 nav ul li:not(:last-child)::after {
@@ -82,16 +76,10 @@ h1 {
     font-size: 8em; /* Increase the size of the main header text */
     z-index: 2;
     position: relative;
-    margin-bottom: 3px; /* Add some spacing between title and nav */
-    margin-top: 3px;
-    align-items: center;
-    white-space: nowrap;
-    overflow: inherit;
+    margin: 3px 0; /* Add some spacing between title and nav */
     text-align: center;
 }
 
-
-/* Box container CSS */
 .box-container {
     width: 100%;
     max-width: 800px; /* Adjust as needed */
@@ -104,13 +92,10 @@ h1 {
 .box {
     width: 100%; /* Full width within the container */
     border-radius: 20px;
-    color: white;
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     font-size: large;
     text-align: left; /* Align text to the left */
-    background-color: #ffffff; /* Default background color */
-    color: black; /* Default text color */
 }
 
 .box1 {
@@ -146,4 +131,25 @@ h1 {
     font-size: 10px;
     padding: 5px;
     opacity: 0.5;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 4em; /* Adjust header font size for mobile */
+    }
+    
+    nav ul {
+        flex-direction: column; /* Stack nav items vertically on mobile */
+        gap: 10px; /* Reduce gap between nav items */
+    }
+    
+    nav ul li:not(:last-child)::after {
+        display: none; /* Remove separator on mobile */
+    }
+    
+    nav ul li a {
+        font-size: 1.2em; /* Adjust font size for nav items on mobile */
+        padding: 10px 15px; /* Adjust padding for nav items on mobile */
+    }
 }
