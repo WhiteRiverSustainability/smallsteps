@@ -10,6 +10,18 @@ body {
     line-height: 1.6;
 }
 
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(to bottom, #8FBC8F, #556B2F); /* Gradient background for main section */
+    color: white;
+    min-height: 100vh; /* Ensure it takes full height of viewport */
+    text-align: center;
+}
+
 .header {
     background: url('https://github.com/WhiteRiverSustainability/smallsteps/blob/main/Images/nav.jpg?raw=true') center/cover #90a997;
     color: white;

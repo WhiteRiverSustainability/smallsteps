@@ -22,6 +22,18 @@ body {
     position: relative; /* To position the text properly */
 }
 
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(to bottom, #8FBC8F, #556B2F); /* Gradient background for main section */
+    color: white;
+    min-height: 100vh; /* Ensure it takes full height of viewport */
+    text-align: center;
+}
+
 .header::after {
     content: "";
     background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent layer for better text readability */
