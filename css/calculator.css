@@ -4,7 +4,8 @@
 
 body {
     font-family: 'Lora', serif;
-    background-color: #556B2F; /* Dark earthy green */
+    background: linear-gradient(to bottom, #8FBC8F, #556B2F); /* Gradient background for main section */
+    color: white;
     color: #333;
     margin: 0; /* Remove margin to align the header with the viewport */
     line-height: 1.6;
@@ -22,17 +23,6 @@ body {
     position: relative; /* To position the text properly */
 }
 
-.main-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    background: linear-gradient(to bottom, #8FBC8F, #556B2F); /* Gradient background for main section */
-    color: white;
-    min-height: 100vh; /* Ensure it takes full height of viewport */
-    text-align: center;
-}
 
 .header::after {
     content: "";
