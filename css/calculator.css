@@ -11,7 +11,7 @@ body {
 }
 
 .header {
-    background: url('https://github.com/WhiteRiverSustainability/smallsteps/blob/main/nav.jpg?raw=true') center/cover #90a997;
+    background: url('https://github.com/WhiteRiverSustainability/smallsteps/blob/main/Images/nav.jpg?raw=true') center/cover #90a997;
     color: white;
     height: 80vh; /* Make the header take up most of the viewport height */
     display: flex;

@@ -12,7 +12,7 @@ body {
 
 .header {
     background-color: #90a997;
-    background-image: url('https://github.com/WhiteRiverSustainability/smallsteps/blob/main/nav.jpg?raw=true'); /* Add your image path here */
+    background-image: url('https://github.com/WhiteRiverSustainability/smallsteps/blob/main/Images/nav.jpg?raw=true'); /* Add your image path here */
     background-size: cover;
     background-position: center center; /* Center the middle of the image */
     color: white;

@@ -55,13 +55,13 @@ function calculateEmissions() {
 
     if (totalEmissions <= targetEmissions) {
         messageElement.innerText = "Great job! You're within the recommended emissions limit.";
-        imageElement.src = "https://github.com/WhiteRiverSustainability/smallsteps/blob/main/goodjob.jpg?raw=true"; // Replace with actual image path
+        imageElement.src = "https://github.com/WhiteRiverSustainability/smallsteps/blob/main/Images/goodjob.jpg?raw=true"; // Replace with actual image path
     } else if (totalEmissions <= targetEmissions * 1.5) {
         messageElement.innerText = "You're doing okay, but there's room for improvement.";
-        imageElement.src = "https://github.com/WhiteRiverSustainability/smallsteps/blob/main/soso.jpg?raw=true"; // Replace with actual image path
+        imageElement.src = "https://github.com/WhiteRiverSustainability/smallsteps/blob/main/Images/soso.jpg?raw=true"; // Replace with actual image path
     } else {
         messageElement.innerText = "Your emissions are too high. Consider making lifestyle changes.";
-        imageElement.src = "https://github.com/WhiteRiverSustainability/smallsteps/blob/main/notgood.jpg?raw=true"; // Replace with actual image path
+        imageElement.src = "https://github.com/WhiteRiverSustainability/smallsteps/blob/main/Images/notgood.jpg?raw=true"; // Replace with actual image path
     }
 
     // Remove the hidden class to display the results and the accordion

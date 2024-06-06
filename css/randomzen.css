@@ -13,7 +13,7 @@ body {
 
 /* Header Styles */
 .header {
-    background: url('https://github.com/WhiteRiverSustainability/smallsteps/blob/main/nav.jpg?raw=true') center/cover #90a997;
+    background: url('https://github.com/WhiteRiverSustainability/smallsteps/blob/main/Images/nav.jpg?raw=true') center/cover #90a997;
     color: white;
     height: 80vh;
     display: flex;
