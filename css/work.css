@@ -90,19 +90,44 @@ h1 {
     text-align: center;
 }
 
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(to bottom, #8FBC8F, #556B2F); /* Gradient background for main section */
+    color: white;
+    min-height: 100vh; /* Ensure it takes full height of viewport */
+    text-align: center;
+}
+
 .file-list ul {
     list-style: none;
     padding: 0;
+    margin: 20px 0; /* Add some margin for spacing */
+    max-width: 800px; /* Set a max-width for better layout */
 }
 
 .file-list ul li {
     margin: 10px 0;
+    padding: 10px; /* Add padding for better spacing */
+    background-color: #fff; /* White background for list items */
+    color: #333; /* Dark text color */
+    border-radius: 5px; /* Rounded corners for list items */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for list items */
+    transition: transform 0.3s; /* Smooth transition for hover effects */
+}
+
+.file-list ul li:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
 }
 
 .file-list ul li a {
     color: #0066cc;
     text-decoration: none;
     font-size: 1.2em;
+    display: block; /* Make the link take up the entire list item */
 }
 
 .file-list ul li a:hover {
@@ -124,28 +149,8 @@ h1 {
 
 .modal-content {
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 5% auto; /* 5% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
     width: 80%; /* Could be more or less, depending on screen size */
-    position: relative;
-}
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-#fileFrame {
-    width: 100%;
-    height: 500px; /* Adjust as necessary */
-}
+    max-width: 1000px; /* Set a max-width for
