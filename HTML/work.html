@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Preview</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="calculator.html">Calculator</a></li>
+                <li><a href="work.html">Work</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>File Preview</h1>
+        <p>Click on a file to preview it in a pop-up window.</p>
+        <div class="file-list">
+            <ul>
+                <li><a href="javascript:void(0)" onclick="openFilePreview('https://raw.githubusercontent.com/WhiteRiverSustainability/smallsteps/main/Improving%20the%20Energy%20Landscape%20in%20Indiana.pdf')">Improving the Energy Landscape in Indiana</a></li>
+                <!-- Add more files here -->
+            </ul>
+        </div>
+    </main>
+
+    <!-- File preview modal -->
+    <div id="fileModal" class="hidden">
+        <div class="modal-content">
+            <span class="close" onclick="closeFilePreview()">&times;</span>
+            <iframe id="fileFrame" src="" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <script src="js/work.js"></script>
+</body>
+</html>
