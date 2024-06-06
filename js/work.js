@@ -1,10 +1,12 @@
+// js/main.js
+
 // Function to open the file preview modal
-function openFilePreview(fileName) {
+function openFilePreview(fileUrl) {
     const fileModal = document.getElementById('fileModal');
     const fileFrame = document.getElementById('fileFrame');
 
-    // Set the source of the iframe to the file path
-    fileFrame.src = `/path/to/your/files/${fileName}`;
+    // Set the source of the iframe to the file URL
+    fileFrame.src = fileUrl;
 
     // Display the modal
     fileModal.style.display = 'block';
