@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
         };
 
         // Send the email
-        emailjs.send('service_v2wmdx', 'template_p9vrqt4', templateParams)
+        emailjs.send('service_v2wmdr', 'template_p9vrqt4', templateParams)
             .then(function(response) {
                 console.log('SUCCESS!', response.status, response.text);
                 alert('Email sent successfully!');
