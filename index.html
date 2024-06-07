@@ -53,6 +53,14 @@
     </main>
     <footer class="footer">
         <div class="footer-content">
+            <button id="open-form-btn">Contact</button>
+        </div>
+    </footer>
+
+    <!-- Popup Modal -->
+    <div id="contact-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
             <form id="contact-form">
                 <h2>Contact Us</h2>
                 <div class="input-group">
@@ -70,13 +78,9 @@
                 <button type="submit">Send</button>
             </form>
         </div>
-    </footer>
+    </div>
+
     <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function() {
-            emailjs.init('5K7UV5PpWCzKLAHFH'); // Replace 'YOUR_USER_ID' with your EmailJS user ID
-        })();
-    </script>
     <script src="js/index.js"></script>
 </body>
 </html>
