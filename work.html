@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>File Preview</title>
-    <link rel="stylesheet" href="css/work.css">
+    <title>About Us</title>
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
     <header class="header">
@@ -15,26 +15,62 @@
                 <li><a href="work.html">Work</a></li>
             </ul>
         </nav>
-        <h1>Work</h1>
+        <h1>About Us</h1>
     </header>
     <main class="main-content">
-        <p>Each of these files are available for preview.</p>
-        <div class="file-list">
-            <ul>
-                <li><a href="javascript:void(0)" onclick="openFilePreview('https://whiteriversustainability.netlify.app/Docs/Improving%20the%20Energy%20Landscape%20in%20Indiana.pdf')">Improving the Energy Landscape in Indiana</a></li>
-                <!-- Add more files here -->
-            </ul>
+        <div class="box-container">
+            <div class="box box1">
+                <p><strong> Look, there are a ton of incredibly intelligent or motivated or charismatic individuals out there. I am somewhere in between all of those. I am a connector, I am a stone helping you across the creek. I give you my word that I’ll give you my best effort in what I do, and that is backed by:</strong></p>
+                <ul>
+                    <li>My love for my daughter. The world needs people to share their gifts and their skills. Her well-being matters, so I will lean into the cutting edge of mission-driven efficiency to improve the world for her.</li>
+                    <li>My love for the natural world. No matter where I’ve gone building a connection with and being a protector for our planet has been at the forefront of my effort.</li>
+                    <li>My love for my community. Whether it is in individuals or organizations I keep an eye out for who is doing good work so we can catalyze bigger impacts for those that need it. We all need those that look out for us.</li>
+                </ul>
+            </div>
+            <div class="box box2">
+                <p><strong> I care a lot, but why should you work with me? </strong></p>
+                <ul>
+                    <li>A decade of education across the lifespan, most of which is through a sustainability lens.</li>
+                    <li>Acknowledged with a national award, “ACYCP Dr. Carol Kelly’s Newcomer Award” for the impact I have had locally.</li>
+                    <li>Project Management Professional (PMP) certified to show that I execute with excellence in a timely and efficient manner. From small grassroots programs to large statewide projects I can serve and lead a team towards their intended goal.</li>
+                    <li>Cross-functional experience in education, public health, and economic/workforce development.</li>
+                    <li>Self-trained and professionally acknowledged, entrepreneurial data consultant.</li>
+                    <li>A range of experience and training in greenhouse gas accounting, environmental management, permaculture, and naturalist studies.</li>
+                </ul>
+            </div>
+            <div class="box box3">
+                <p><strong> Experiences </strong></p>
+                <ul>
+                    <li>Lead an environmental education program to double its capacity over the course of two years.</li>
+                    <li>Brought in a multi-million dollar federal public health grant to Indiana.</li>
+                    <li>Prototyped a dynamic data analysis tool for a sales team.</li>
+                    <li>Instituted an easy to use greenhouse gas calculator tool.</li>
+                    <li>Initiated an office sustainability group to improve environmental practices.</li>
+                    <li>Worked in high-conflict opportunity youth spaces, which proves to benefit a level-headedness in structured meeting space.</li>
+                </ul>
+            </div>
         </div>
     </main>
-
-    <!-- File preview modal -->
-    <div id="fileModal" class="hidden">
-        <div class="modal-content">
-            <span class="close" onclick="closeFilePreview()">&times;</span>
-            <iframe id="fileFrame" src="" frameborder="0"></iframe>
+    <footer class="footer">
+        <div class="footer-content">
+            <form id="contact-form">
+                <h2>Contact Us</h2>
+                <div class="input-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit">Send</button>
+            </form>
         </div>
-    </div>
-
-    <script src="js/work.js"></script>
+    </footer>
+    <script src="js/contact.js"></script>
 </body>
 </html>
