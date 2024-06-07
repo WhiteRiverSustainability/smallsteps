@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Initialize EmailJS with your public key
-    emailjs.init('5K7UV5PpWCzKLAHFH'); // Replace 'YOUR_PUBLIC_KEY' with your EmailJS public key
+    emailjs.init('5K7UV5PpWCzKLAHFH');
 
     // Get modal elements
     const modal = document.getElementById('contact-modal');
@@ -33,6 +33,12 @@ document.addEventListener('DOMContentLoaded', function () {
         const email = document.getElementById('email').value;
         const message = document.getElementById('message').value;
 
+        // Check if any field is empty
+        if (!name || !email || !message) {
+            alert('Please fill out all fields.');
+            return;
+        }
+
         // Prepare the email data
         const templateParams = {
             name: name,
@@ -43,6 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // Send the email
         emailjs.send('service_v2wmdx', 'template_p9vrqt4', templateParams)
             .then(function(response) {
+                console.log('SUCCESS!', response.status, response.text);
                 alert('Email sent successfully!');
                 // Clear the form after successful submission
                 document.getElementById('contact-form').reset();
