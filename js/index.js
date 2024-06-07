@@ -49,7 +49,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 // Close the modal
                 modal.style.display = 'none';
             }, function(error) {
-                alert('Failed to send email. Please try again.');
+                console.error('Failed to send email:', error);
+                alert('Failed to send email. Please check the console for details.');
             });
     });
 });
