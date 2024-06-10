@@ -1,4 +1,3 @@
-
 // Function to open the file preview modal
 function openFilePreview(fileUrl) {
     const fileModal = document.getElementById('fileModal');
@@ -23,10 +22,13 @@ function closeFilePreview() {
     fileFrame.src = '';
 }
 
-// Close the modal if the user clicks outside the modal content
-window.onclick = function(event) {
+// Event listener to close the modal if the user clicks outside the modal content
+window.addEventListener('click', function(event) {
     const fileModal = document.getElementById('fileModal');
     if (event.target == fileModal) {
         closeFilePreview();
     }
-}
+});
+
+// Adding event listener for the close button to close the modal
+document.querySelector('.close').addEventListener('click', closeFilePreview);
