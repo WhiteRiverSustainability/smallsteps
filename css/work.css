@@ -149,14 +149,21 @@ h1 {
 
 .modal-content {
     background-color: #fefefe;
-    margin: 5% auto; /* 5% from the top and centered */
+    margin: 2% auto; /* Reduced margin for more height */
     padding: 20px;
     border: 1px solid #888;
     width: 95%; /* Increased width */
-    max-width: 1600px; /* Set a max-width for better layout */
+    max-width: 1600px; /* Increased max-width */
     position: relative;
     border-radius: 10px; /* Rounded corners for modal */
-    height: 90vh; /* Added height for modal */
+    height: 95vh; /* Make the modal taller */
+    overflow: hidden; /* Ensure content fits inside the modal */
+}
+
+#fileFrame {
+    width: 100%;
+    height: 90vh; /* Adjusted height to fit within the modal */
+    border: none; /* Remove border for iframe */
 }
 
 .close {
@@ -173,11 +180,6 @@ h1 {
     cursor: pointer;
 }
 
-#fileFrame {
-    width: 100%;
-    height: 90vh; /* Increased height */
-    border: none; /* Remove border for iframe */
-}
 
 /* Responsive adjustments */
 @media (max-width: 600px) {
