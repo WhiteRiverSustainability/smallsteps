@@ -152,17 +152,17 @@ h1 {
     margin: 2% auto; /* Reduced margin for more height */
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Increased width */
-    max-width: 1400px; /* Increased max-width */
+    width: 90%; /* Increased width */
+    max-width: 1800px; /* Increased max-width */
     position: relative;
     border-radius: 10px; /* Rounded corners for modal */
-    height: 90vh; /* Adjusted height for modal */
+    height: 95vh; /* Make the modal taller */
     overflow: hidden; /* Ensure content fits inside the modal */
 }
 
 #fileFrame {
     width: 100%;
-    height: 85vh; /* Adjusted height to fit within the modal */
+    height: 90vh; /* Adjusted height to fit within the modal */
     border: none; /* Remove border for iframe */
 }
 
