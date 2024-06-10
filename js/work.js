@@ -1,4 +1,3 @@
-// js/main.js
 
 // Function to open the file preview modal
 function openFilePreview(fileUrl) {
