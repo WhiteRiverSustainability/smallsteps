@@ -152,10 +152,11 @@ h1 {
     margin: 5% auto; /* 5% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
-    width: 90%; /* Increased width */
-    max-width: 1200px; /* Set a max-width for better layout */
+    width: 95%; /* Increased width */
+    max-width: 1600px; /* Set a max-width for better layout */
     position: relative;
     border-radius: 10px; /* Rounded corners for modal */
+    height: 90vh; /* Added height for modal */
 }
 
 .close {
