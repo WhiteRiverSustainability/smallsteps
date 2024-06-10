@@ -145,24 +145,26 @@ h1 {
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgba(0, 0, 0, 0.7); /* Black with opacity */
+    display: flex; /* Use flexbox to center the modal content */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
 }
 
 .modal-content {
     background-color: #fefefe;
-    margin: 2% auto; /* Reduced margin for more height */
     padding: 20px;
     border: 1px solid #888;
     width: 90%; /* Increased width */
-    max-width: 2500px; /* Increased max-width */
-    position: relative;
+    max-width: 1200px; /* Set a max-width for better layout */
     border-radius: 10px; /* Rounded corners for modal */
-    height: 95vh; /* Make the modal taller */
+    height: 80vh; /* Make the modal taller */
     overflow: hidden; /* Ensure content fits inside the modal */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Add a shadow for better visibility */
 }
 
 #fileFrame {
     width: 100%;
-    height: 90vh; /* Adjusted height to fit within the modal */
+    height: 100%; /* Adjusted height to fit within the modal */
     border: none; /* Remove border for iframe */
 }
 
@@ -179,7 +181,6 @@ h1 {
     text-decoration: none;
     cursor: pointer;
 }
-
 
 /* Responsive adjustments */
 @media (max-width: 600px) {
@@ -204,3 +205,4 @@ h1 {
         padding: 15px; /* Reduce padding for modal */
     }
 }
+

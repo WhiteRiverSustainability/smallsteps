@@ -7,7 +7,7 @@ function openFilePreview(fileUrl) {
     fileFrame.src = fileUrl;
 
     // Display the modal
-    fileModal.style.display = 'block';
+    fileModal.style.display = 'flex';
 }
 
 // Function to close the file preview modal
