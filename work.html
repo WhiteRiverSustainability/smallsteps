@@ -30,10 +30,10 @@
     </main>
     
     <!-- File preview modal -->
-    <div id="fileModal" class="hidden">
-        <div class="modal-content">
+    <div id="fileModal" class="hidden" style="display: flex; position: fixed; z-index: 10; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0, 0, 0, 0.7); align-items: center; justify-content: center;">
+        <div class="modal-content" style="background-color: #fefefe; padding: 20px; border: 1px solid #888; width: 90%; max-width: 2400px; border-radius: 10px; height: 80vh; overflow: hidden; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);">
             <span class="close" onclick="closeFilePreview()">&times;</span>
-            <iframe id="fileFrame" src="" frameborder="0"></iframe>
+            <iframe id="fileFrame" src="" frameborder="0" style="width: 100%; height: 100%; border: none;"></iframe>
         </div>
     </div>
     
@@ -68,7 +68,41 @@
         </div>
     </div>
 
-    <script src="js/work.js"></script>
-   
+    <script>
+        // Function to open the file preview modal
+        function openFilePreview(fileUrl) {
+            const fileModal = document.getElementById('fileModal');
+            const fileFrame = document.getElementById('fileFrame');
+
+            // Set the source of the iframe to the file URL
+            fileFrame.src = fileUrl;
+
+            // Display the modal
+            fileModal.style.display = 'flex';
+        }
+
+        // Function to close the file preview modal
+        function closeFilePreview() {
+            const fileModal = document.getElementById('fileModal');
+            const fileFrame = document.getElementById('fileFrame');
+
+            // Hide the modal
+            fileModal.style.display = 'none';
+
+            // Clear the iframe source
+            fileFrame.src = '';
+        }
+
+        // Event listener to close the modal if the user clicks outside the modal content
+        window.addEventListener('click', function(event) {
+            const fileModal = document.getElementById('fileModal');
+            if (event.target == fileModal) {
+                closeFilePreview();
+            }
+        });
+
+        // Adding event listener for the close button to close the modal
+        document.querySelector('.close').addEventListener('click', closeFilePreview);
+    </script>
 </body>
 </html>
