@@ -155,7 +155,7 @@ h1 {
     padding: 20px;
     border: 1px solid #888;
     width: 90%; /* Increased width */
-    max-width: 1200px; /* Set a max-width for better layout */
+    max-width: 2400px; /* Double the max-width for better layout */
     border-radius: 10px; /* Rounded corners for modal */
     height: 80vh; /* Make the modal taller */
     overflow: hidden; /* Ensure content fits inside the modal */
@@ -205,4 +205,3 @@ h1 {
         padding: 15px; /* Reduce padding for modal */
     }
 }
-
