@@ -83,17 +83,27 @@
     border-radius: 5px;
 }
 
-button[type="submit"] {
-    background-color: #708d5d;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
+/* Common styles for both buttons */
+.footer-button,
+#open-form-btn {
+  display: inline-block;        /* Ensures both behave like buttons */
+  width: 200px;                 /* Same width for both */
+  height: 50px;                 /* Same height for both */
+  font-size: 1.2em;             /* Same font size */
+  line-height: 50px;            /* Vertically center the text */
+  text-align: center;           /* Center the text horizontally */
+  background-color: #708d5d;    /* Match the color if desired */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;        /* So links look like buttons */
+  margin: 5px;                  /* Optional spacing around buttons */
+  transition: background-color 0.3s ease;
 }
 
-button[type="submit"]:hover {
-    background-color: #556B2F;
+/* Common hover effect */
+.footer-button:hover,
+#open-form-btn:hover {
+  background-color: #556B2F;
 }

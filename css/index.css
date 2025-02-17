@@ -157,21 +157,28 @@ h1 {
     gap: 10px;
 }
 
-.footer-button {
-    background-color: #708d5d; /* Match the existing style */
-    color: white;
-    font-size: 1.2em;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    text-align: center;
-    cursor: pointer;
-    text-decoration: none; /* Makes the link look like a button */
-    display: inline-block;
-    width: 200px; /* Ensure both buttons are the same size */
-    text-align: center;
+/* Common styles for both buttons */
+.footer-button,
+#open-form-btn {
+  display: inline-block;        /* Ensures both behave like buttons */
+  width: 200px;                 /* Same width for both */
+  height: 50px;                 /* Same height for both */
+  font-size: 1.2em;             /* Same font size */
+  line-height: 50px;            /* Vertically center the text */
+  text-align: center;           /* Center the text horizontally */
+  background-color: #708d5d;    /* Match the color if desired */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;        /* So links look like buttons */
+  margin: 5px;                  /* Optional spacing around buttons */
+  transition: background-color 0.3s ease;
 }
 
-.footer-button:hover {
-    background-color: #556B2F; /* Darker shade for hover effect */
+/* Common hover effect */
+.footer-button:hover,
+#open-form-btn:hover {
+  background-color: #556B2F;
 }
+
