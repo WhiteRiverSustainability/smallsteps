@@ -84,7 +84,7 @@
 }
 
 button[type="submit"] {
-    background-color: #4CAF50;
+    background-color: #708d5d;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -95,5 +95,5 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: #556B2F;
 }
